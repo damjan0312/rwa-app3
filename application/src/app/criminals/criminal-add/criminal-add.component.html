@@ -1,0 +1,63 @@
+<div id="most-wanted-add">
+  <h2>Add Criminal</h2>
+
+  <form [formGroup]="criminalForm" (submit)="createCriminal()">
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="first_name" />
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Last Name" formControlName="last_name"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Hair" formControlName="hair">
+          <mat-option value="Brown">Brown</mat-option>
+          <mat-option value="Black">Black</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Height" formControlName="height"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Weight" formControlName="weight"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Build" formControlName="build">
+          <mat-option value="Big">Big</mat-option>
+          <mat-option value="Small">Small</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Sex" formControlName="sex">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Citizenship" formControlName="citizenship"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Languages" formControlName="languages"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Scars and Marks" formControlName="scars_and_marks"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Reward" formControlName="reward"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Criminal act" formControlName="criminal_act">
+          <mat-option value="Insurance Fraud">Insurance Fraud</mat-option>
+          <mat-option value="Kidnapping">Kidnapping</mat-option>
+          <mat-option value="Murder: First-degree">Murder: First-degree</mat-option>
+          <mat-option value="Murder: Second-degree">Murder: Second-degree</mat-option>
+          <mat-option value="Robbery">Robbery</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button>Add Criminal</button>
+  </form>
+  <hr />
+</div>
