@@ -3,9 +3,8 @@
 
   <form [formGroup]="criminalForm" (submit)="updateCriminal()">
     <div class="example-container">
+      <input matInput placeholder="id" formControlName="id" hidden />
 
-        <input matInput placeholder="id" formControlName="id" hidden/>
-     
       <mat-form-field>
         <input matInput placeholder="First Name" formControlName="first_name" />
       </mat-form-field>
@@ -59,7 +58,7 @@
         </mat-select>
       </mat-form-field>
 
-      <button type="submit">Update Criminal</button>
+      <button type="submit" mat-raised-button color="primary">Update Criminal</button>
     </div>
   </form>
   <hr />

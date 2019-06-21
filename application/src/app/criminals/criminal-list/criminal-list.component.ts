@@ -8,13 +8,15 @@ import * as fromCriminal from '../state/criminals.reducer';
 import { Criminal } from '../criminals.model';
 import * as criminalActions from '../state/criminals.actions';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-criminal-list',
   templateUrl: './criminal-list.component.html',
   styleUrls: ['./criminal-list.component.css'],
 })
 export class CriminalListComponent implements OnInit {
-  constructor(private store: Store<fromCriminal.AppState>) {}
+  constructor(private store: Store<fromCriminal.AppState>, private router: Router) {}
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -65,5 +67,9 @@ export class CriminalListComponent implements OnInit {
 
   updateCriminal(criminal: Criminal) {
     this.store.dispatch(new criminalActions.LoadCriminal(criminal.id));
+  }
+
+  seeDetails(criminal: Criminal) {
+    this.router.navigate(['/mostWanted/details', criminal.id]);
   }
 }

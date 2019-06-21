@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule, MatSortModule } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { MatPaginatorModule } from '@angular/material';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatButtonModule,
   ],
   exports: [
     MatFormFieldModule,
@@ -31,6 +33,7 @@ import { MatPaginatorModule } from '@angular/material';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatButtonModule,
   ],
   providers: [MatNativeDateModule],
 })

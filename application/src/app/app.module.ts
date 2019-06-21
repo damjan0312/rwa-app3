@@ -26,9 +26,12 @@ import {
   MatSortModule,
 } from '@angular/material';
 import { HomeComponent } from './home/home.component';
+import { CriminalDetailsComponent } from './criminals/criminal-details/criminal-details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NewsFeedComponent } from './news-feed/news-feed.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, CriminalDetailsComponent, NotFoundComponent, NewsFeedComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

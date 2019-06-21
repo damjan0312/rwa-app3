@@ -15,6 +15,7 @@ import { CriminalEffect } from './state/criminals.effects';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CriminalDetailsComponent } from './criminal-details/criminal-details.component';
 
 const routes: Routes = [
   {

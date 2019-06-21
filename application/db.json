@@ -1,21 +1,6 @@
 {
   "criminals": [
     {
-      "first_name": "John ",
-      "last_name": "Doe",
-      "place_of_birth": "Atlanta Road 656A",
-      "hair": "Platinum",
-      "weight": "Platinum",
-      "build": "Platinum",
-      "sex": "Platinum",
-      "citizenship": "Platinum",
-      "languages": "Platinum",
-      "scars_and_marks": "Platinum",
-      "reward": "The Rewards For Justice Program, United States Department of State, is offering a reward of up to $5 million for information leading directly to the apprehension or conviction",
-      "criminal_act": "Kidnapping",
-      "id": 2
-    },
-    {
       "first_name": "Marco",
       "last_name": "Alvarez",
       "place_of_birth": "Atlanta Road 656A",
@@ -60,6 +45,39 @@
       "reward": "10.000 American Dollars",
       "criminal_act": "Robbery",
       "id": 5
+    },
+    {
+      "first_name": "Ramadan",
+      "last_name": "Salah",
+      "place_of_birth": "Atlanta Road 656A",
+      "hair": "Brown",
+      "height": "6.2",
+      "weight": "197 pounds",
+      "build": "Big",
+      "sex": "Male",
+      "languages": "English, Arabic, Russian",
+      "citizenship": "Arabic",
+      "scars_and_marks": "No marks",
+      "reward": "50.000 American Dollars",
+      "criminal_act": "Kidnapping",
+      "id": 6
+    }
+  ],
+  "news": [
+    {
+      "author": "Guest Writer",
+      "title": "Facebook’s Crypto Libra is a Huge Deal – Just Not for the Reason you Think",
+      "description": "By CCN Markets: With the release of its whitepaper, Facebook officially announced its cryptocurrency, Libra. It now joins JP Morgan and Atletico Mineiro among the ranks of non-blockchain businesses with their own crypto. What does this mean for cryptocurrency…"
+    },
+    {
+      "author": "Guest Writer",
+      "title": "Facebook’s Crypto Libra is a Huge Deal – Just Not for the Reason you Think",
+      "description": "By CCN Markets: With the release of its whitepaper, Facebook officially announced its cryptocurrency, Libra. It now joins JP Morgan and Atletico Mineiro among the ranks of non-blockchain businesses with their own crypto. What does this mean for cryptocurrency…"
+    },
+    {
+      "author": "Guest Writer",
+      "title": "Facebook’s Crypto Libra is a Huge Deal – Just Not for the Reason you Think",
+      "description": "By CCN Markets: With the release of its whitepaper, Facebook officially announced its cryptocurrency, Libra. It now joins JP Morgan and Atletico Mineiro among the ranks of non-blockchain businesses with their own crypto. What does this mean for cryptocurrency…"
     }
   ]
 }

@@ -1,0 +1,69 @@
+<div class="container" *ngIf="model">
+  <h1 class="names">
+    <h3>{{ model.first_name }} {{ model.last_name }}</h3>
+
+    <hr />
+  </h1>
+
+  <div class="infos">
+    <span>
+      <label for="first_name">First Name: </label>
+      <h4 id="first_name">{{ model.first_name }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="last_name">Last Name:</label>
+      <h4 id="last_name">{{ model.last_name }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="place_of_birth">Place of Birth:</label>
+      <h4 id="place_of_birth">{{ model.place_of_birth }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="hair">Hair:</label>
+      <h4 id="hair">{{ model.hair }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="weight">Weight:</label>
+      <h4 id="weight">{{ model.weight }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="build">Build:</label>
+      <h4 id="build">{{ model.build }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="sex">Sex:</label>
+      <h4 id="sex">{{ model.sex }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="citizenship">Citizenship:</label>
+      <h4 id="citizenship">{{ model.citizenship }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="language">Language:</label>
+      <h4 id="language">{{ model.language }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="scars_and_marks">Scars and Marks:</label>
+      <h4 id="scars_and_marks">{{ model.scars_and_marks }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="reward">Reward:</label>
+      <h4 id="reward">{{ model.reward }}</h4>
+    </span>
+    <br />
+    <span>
+      <label for="criminal_act">Criminal Act:</label>
+      <h4 id="criminal_act">{{ model.criminal_act }}</h4></span
+    >
+  </div>
+</div>

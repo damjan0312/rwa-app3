@@ -1,0 +1,31 @@
+.container {
+  background: white;
+  margin: 4em;
+  border-radius: 5px;
+
+  -webkit-box-shadow: -4px -9px 19px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px -9px 19px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px -9px 19px -8px rgba(0, 0, 0, 0.75);
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container > div {
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin-left: 2em;
+    margin-right: 2em;
+
+    background-color: #004791;
+  }
+}
+
+h1 {
+  color: #004791;
+}
