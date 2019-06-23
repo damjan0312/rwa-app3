@@ -1,5 +1,10 @@
 <div id="most-wanted-add">
-  <h2>Edit Criminal</h2>
+  <h2>
+    Edit Criminal
+    <i class="material-icons">
+      edit
+    </i>
+  </h2>
 
   <form [formGroup]="criminalForm" (submit)="updateCriminal()">
     <div class="example-container">
@@ -9,12 +14,14 @@
         <input matInput placeholder="First Name" formControlName="first_name" />
       </mat-form-field>
       <mat-form-field>
-        <textarea matInput placeholder="Last Name" formControlName="last_name"></textarea>
+        <input matInput placeholder="Last Name" formControlName="last_name" />
       </mat-form-field>
       <mat-form-field>
         <mat-select placeholder="Hair" formControlName="hair">
           <mat-option value="Brown">Brown</mat-option>
           <mat-option value="Black">Black</mat-option>
+          <mat-option value="Blone">Blonde</mat-option>
+          <mat-option value="No Hair">No Hair</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
@@ -27,6 +34,9 @@
         <mat-select placeholder="Build" formControlName="build">
           <mat-option value="Big">Big</mat-option>
           <mat-option value="Small">Small</mat-option>
+          <mat-option value="Endomorphs">Endomorphs</mat-option>
+          <mat-option value="Mesomorphs">Mesomorphs</mat-option>
+          <mat-option value="Ectomorphs">Ectomorphs</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>

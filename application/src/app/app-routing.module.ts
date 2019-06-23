@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CriminalDetailsComponent } from './criminals/criminal-details/criminal-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NewsFeedComponent } from './news-feed/news-feed.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,8 +18,8 @@ const routes: Routes = [
     component: CriminalDetailsComponent,
   },
   {
-    path: 'newsFeed',
-    component: NewsFeedComponent,
+    path: 'about',
+    component: AboutComponent,
   },
   {
     path: '**',

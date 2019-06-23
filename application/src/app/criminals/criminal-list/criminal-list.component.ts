@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ViewChild, ChangeDetectorRef, OnInit } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-import { CriminalListDataSource } from './criminal-list-datasource';
 import { Store, select } from '@ngrx/store';
 
 import * as fromCriminal from '../state/criminals.reducer';
@@ -9,6 +8,11 @@ import { Criminal } from '../criminals.model';
 import * as criminalActions from '../state/criminals.actions';
 
 import { Router } from '@angular/router';
+
+import * as CriminalActions from '../state/criminals.actions';
+
+import { map, filter, count, take } from 'rxjs/operators';
+import { Observable, of as observableOf, merge, BehaviorSubject, combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-criminal-list',
@@ -20,44 +24,26 @@ export class CriminalListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  dataSource: CriminalListDataSource;
+  dataSource: MatTableDataSource<any>;
+  searchKey: string;
+  data$;
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = [
-    'id',
-    'first_name',
-    'last_name',
-    'update_criminal',
-    'delete_criminal',
-    'see_more',
-    /*   'place_of_birth',
-    'hair',
-    'weight',
-    'build',
-    'sex',
-    'citizenship',
-    'languages',
-    'scars_and_marks',
-    'reward',*/
-  ];
+  displayedColumns = ['id', 'first_name', 'last_name', 'update_criminal', 'delete_criminal', 'see_more'];
 
   ngOnInit() {
-    //this.dataSource = new CriminalListDataSource(this.paginator, this.sort, this.store, this.cd);
+    this.store.dispatch(new CriminalActions.LoadCriminals());
+    this.data$ = this.store.pipe(select(fromCriminal.getCriminals));
 
-    this.dataSource = new CriminalListDataSource(this.paginator, this.sort, this.store);
+    this.data$.subscribe(list => {
+      let array = list.map(item => {
+        return item;
+      });
+
+      this.dataSource = new MatTableDataSource(array);
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
+    });
   }
-
-  /* ngAfterViewInit() {
-    setTimeout(() => {
-      this.paginator.page
-        .pipe(
-          startWith(null),
-          tap(() => (this.dataSource = new CriminalListDataSource(this.paginator, this.sort, this.store, this.cd)))
-        )
-        .subscribe();
-    }); */
-
-  //  this.dataSource = new CriminalListDataSource(this.paginator, this.sort, this.store);
 
   deleteCriminal(criminal: Criminal) {
     if (confirm('Sure You Want to Delete this Criminal from Our Database?')) {
@@ -71,5 +57,14 @@ export class CriminalListComponent implements OnInit {
 
   seeDetails(criminal: Criminal) {
     this.router.navigate(['/mostWanted/details', criminal.id]);
+  }
+
+  onSearchClear() {
+    this.searchKey = '';
+    this.applyFilter();
+  }
+
+  applyFilter() {
+    this.dataSource.filter = this.searchKey.trim().toLowerCase();
   }
 }

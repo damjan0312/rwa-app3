@@ -3,15 +3,23 @@
     Most Wanted List
   </h1>
 
+  <div class="search-div">
+    <mat-form-field class="search-form-field" floatLabel="never">
+      <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()" />
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey" (click)="onSearchClear()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
   <div class="mat-elevation-z8">
     <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
       <!-- Id Column -->
       <ng-container matColumnDef="first_name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header mat-sort-header>First Name</th>
         <td mat-cell *matCellDef="let row">{{ row.first_name }}</td>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
         <td mat-cell *matCellDef="let row">{{ row.id }}</td>
@@ -22,73 +30,48 @@
       </ng-container>
 
       <ng-container matColumnDef="update_criminal">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Update Criminals</th>
+        <th mat-header-cell *matHeaderCellDef>Update Criminals</th>
         <td mat-cell *matCellDef="let row">
-          <a mat-raised-button color="primary" (click)="updateCriminal(row)">Edit</a>
+          <a
+            mat-raised-button
+            color="primary"
+            (click)="updateCriminal(row)"
+            matTooltip="Update informations about Criminal"
+            >Edit
+            <i class="material-icons">
+              edit
+            </i></a
+          >
         </td>
       </ng-container>
 
       <ng-container matColumnDef="delete_criminal">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Delete Criminals</th>
+        <th mat-header-cell *matHeaderCellDef>Delete Criminals</th>
         <td mat-cell *matCellDef="let row">
-          <a mat-raised-button color="warn" (click)="deleteCriminal(row)">Delete</a>
+          <a
+            mat-raised-button
+            color="warn"
+            (click)="deleteCriminal(row)"
+            matTooltip="Delete Criminal from database if Criminal is CAPTURED"
+            >Delete
+            <i class="material-icons">
+              delete
+            </i></a
+          >
         </td>
       </ng-container>
 
       <ng-container matColumnDef="see_more">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>See More</th>
+        <th mat-header-cell *matHeaderCellDef>See More</th>
         <td mat-cell *matCellDef="let row" (click)="seeDetails(row)">
-          <a mat-raised-button color="accent" mat-list-item>See More</a>
+          <a mat-raised-button color="accent" mat-list-item matTooltip="See Criminal's Page"
+            >See More
+            <i class="material-icons">
+              remove_red_eye
+            </i></a
+          >
         </td>
       </ng-container>
-
-      <!--   <ng-container matColumnDef="place_of_birth">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Place Of Birth</th>
-        <td mat-cell *matCellDef="let row">{{ row.place_of_birth }}</td>
-      </ng-container>
-  
-      <ng-container matColumnDef="hair">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Hair</th>
-        <td mat-cell *matCellDef="let row">{{ row.hair }}</td>
-      </ng-container>
-      <ng-container matColumnDef="height">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Hair</th>
-        <td mat-cell *matCellDef="let row">{{ row.height }}</td>
-      </ng-container>
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th>
-        <td mat-cell *matCellDef="let row">{{ row.weight }}</td>
-      </ng-container>
-      <ng-container matColumnDef="build">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Build</th>
-        <td mat-cell *matCellDef="let row">{{ row.build }}</td>
-      </ng-container>
-      <ng-container matColumnDef="sex">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Sex</th>
-        <td mat-cell *matCellDef="let row">{{ row.sex }}</td>
-      </ng-container>
-      <ng-container matColumnDef="citizenship">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Citizenship</th>
-        <td mat-cell *matCellDef="let row">{{ row.citizenship }}</td>
-      </ng-container>
-      <ng-container matColumnDef="languages">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Languages</th>
-        <td mat-cell *matCellDef="let row">{{ row.languages }}</td>
-      </ng-container>
-      <ng-container matColumnDef="scars_and_marks">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Scars and Marks</th>
-        <td mat-cell *matCellDef="let row">{{ row.scars_and_marks }}</td>
-      </ng-container>
-      <ng-container matColumnDef="reward">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Reward</th>
-        <td mat-cell *matCellDef="let row">{{ row.reward }}</td>
-      </ng-container>
-      <ng-container matColumnDef="criminal_act">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Criminal Act</th>
-        <td mat-cell *matCellDef="let row">{{ row.criminal_act }}</td>
-      </ng-container>
-  
-      -->
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
@@ -98,8 +81,8 @@
       #paginator
       [length]="dataSource.length"
       [pageIndex]="0"
-      [pageSize]="50"
-      [pageSizeOptions]="[25, 50, 100, 250]"
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 25, 50, 100, 250]"
     >
     </mat-paginator>
   </div>

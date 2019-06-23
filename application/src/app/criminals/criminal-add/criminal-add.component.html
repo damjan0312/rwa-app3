@@ -1,5 +1,10 @@
 <div id="most-wanted-add">
-  <h2>Add Criminal</h2>
+  <h2>
+    Add Criminal
+    <i class="material-icons">
+      add
+    </i>
+  </h2>
 
   <form [formGroup]="criminalForm" (submit)="createCriminal()">
     <div class="example-container">
@@ -14,6 +19,9 @@
         <mat-select placeholder="Hair" formControlName="hair">
           <mat-option value="Brown">Brown</mat-option>
           <mat-option value="Black">Black</mat-option>
+
+          <mat-option value="Blone">Blonde</mat-option>
+          <mat-option value="No Hair">No Hair</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
@@ -26,6 +34,10 @@
         <mat-select placeholder="Build" formControlName="build">
           <mat-option value="Big">Big</mat-option>
           <mat-option value="Small">Small</mat-option>
+
+          <mat-option value="Endomorphs">Endomorphs</mat-option>
+          <mat-option value="Mesomorphs">Mesomorphs</mat-option>
+          <mat-option value="Ectomorphs">Ectomorphs</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
@@ -57,7 +69,12 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <button mat-raised-button color="primary">Add Criminal</button>
+    <button mat-raised-button color="primary">
+      Add Criminal
+      <i class="material-icons">
+        add
+      </i>
+    </button>
   </form>
   <hr />
 </div>

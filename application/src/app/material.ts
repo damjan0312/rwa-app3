@@ -5,10 +5,11 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
-import { MatNativeDateModule, MatSortModule } from '@angular/material';
+import { MatNativeDateModule, MatSortModule, MatIconModule } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   imports: [
@@ -22,6 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatPaginatorModule,
     MatSortModule,
     MatButtonModule,
+    MatTooltipModule,
+    MatIconModule,
   ],
   exports: [
     MatFormFieldModule,
@@ -34,6 +37,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatPaginatorModule,
     MatSortModule,
     MatButtonModule,
+    MatTooltipModule,
+    MatIconModule,
   ],
   providers: [MatNativeDateModule],
 })

@@ -1,10 +1,39 @@
 .names {
-  margin: 2em 3em 0 3em;
+  margin: 2em 3em 0.5em 3em;
+  background-color: rgba(205, 227, 255, 0.6);
+  border-radius: 10px;
+  padding: 0.3em;
+}
+
+.flex-container {
+  display: flex;
 }
 
 .infos {
+  flex: 1;
   margin-right: 6em;
   margin-left: 6em;
+
+  span {
+    padding: 0;
+  }
+}
+.image-div {
+  flex: 1;
+  img {
+    border: 2px solid #004791;
+  }
+
+  .alert {
+    background-color: #004791;
+    border-radius: 7px;
+    margin-right: 8em;
+    p {
+      padding: 1em;
+      font-weight: bold;
+      color: white;
+    }
+  }
 }
 
 h4 {

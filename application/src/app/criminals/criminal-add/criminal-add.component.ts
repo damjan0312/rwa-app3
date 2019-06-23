@@ -40,7 +40,6 @@ export class CriminalAddComponent implements OnInit {
     const newCriminal: Criminal = {
       first_name: this.criminalForm.get('first_name').value,
       last_name: this.criminalForm.get('last_name').value,
-      // place_of_birth: this.criminalForm.get('place_of_birth').value,
       place_of_birth: 'Atlanta Road 564A',
       hair: this.criminalForm.get('hair').value,
       height: this.criminalForm.get('height').value,

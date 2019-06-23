@@ -4,16 +4,17 @@
       "first_name": "Marco",
       "last_name": "Alvarez",
       "place_of_birth": "Atlanta Road 656A",
-      "hair": "Platinum",
+      "hair": "Brown",
       "weight": "Platinum",
-      "build": "Platinum",
-      "sex": "Platinum",
+      "build": "Small",
+      "sex": "Male",
       "citizenship": "Platinum",
       "languages": "Platinum",
       "scars_and_marks": "Platinum",
       "reward": "The Rewards For Justice Program, United States Department of State, is offering a reward of up to $5 million for information leading directly to the apprehension or conviction",
       "criminal_act": "Kidnapping",
-      "id": 3
+      "id": 3,
+      "height": "6.2"
     },
     {
       "first_name": "Tedd",
@@ -61,23 +62,38 @@
       "reward": "50.000 American Dollars",
       "criminal_act": "Kidnapping",
       "id": 6
-    }
-  ],
-  "news": [
-    {
-      "author": "Guest Writer",
-      "title": "Facebook’s Crypto Libra is a Huge Deal – Just Not for the Reason you Think",
-      "description": "By CCN Markets: With the release of its whitepaper, Facebook officially announced its cryptocurrency, Libra. It now joins JP Morgan and Atletico Mineiro among the ranks of non-blockchain businesses with their own crypto. What does this mean for cryptocurrency…"
     },
     {
-      "author": "Guest Writer",
-      "title": "Facebook’s Crypto Libra is a Huge Deal – Just Not for the Reason you Think",
-      "description": "By CCN Markets: With the release of its whitepaper, Facebook officially announced its cryptocurrency, Libra. It now joins JP Morgan and Atletico Mineiro among the ranks of non-blockchain businesses with their own crypto. What does this mean for cryptocurrency…"
+      "first_name": "Robert ",
+      "last_name": "Fisher",
+      "place_of_birth": "Atlanta Road 656A",
+      "hair": "Blone",
+      "height": "6.3",
+      "weight": "178 pounds",
+      "build": "Big",
+      "sex": "Male",
+      "languages": "English, Spanihs",
+      "citizenship": "American",
+      "scars_and_marks": "Neck Tattoo",
+      "reward": "7000 American Dollars",
+      "criminal_act": "Kidnapping",
+      "id": 7
     },
     {
-      "author": "Guest Writer",
-      "title": "Facebook’s Crypto Libra is a Huge Deal – Just Not for the Reason you Think",
-      "description": "By CCN Markets: With the release of its whitepaper, Facebook officially announced its cryptocurrency, Libra. It now joins JP Morgan and Atletico Mineiro among the ranks of non-blockchain businesses with their own crypto. What does this mean for cryptocurrency…"
+      "first_name": "Arnoldo",
+      "last_name": "Jimenez",
+      "place_of_birth": "Atlanta Road 564A",
+      "hair": "Black",
+      "height": "6.8",
+      "weight": "208 pounds",
+      "build": "Big",
+      "sex": "Male",
+      "languages": "Spanish, Portuguese",
+      "citizenship": "Spanish",
+      "scars_and_marks": "Right leg Tattoo",
+      "reward": "20000 $",
+      "criminal_act": "Murder: First-degree",
+      "id": 8
     }
   ]
 }

@@ -28,10 +28,18 @@ import {
 import { HomeComponent } from './home/home.component';
 import { CriminalDetailsComponent } from './criminals/criminal-details/criminal-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NewsFeedComponent } from './news-feed/news-feed.component';
+import * as fromCriminals from '../app/criminals/state/criminals.reducer';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, CriminalDetailsComponent, NotFoundComponent, NewsFeedComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    CriminalDetailsComponent,
+    NotFoundComponent,
+    AboutComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -43,7 +51,10 @@ import { NewsFeedComponent } from './news-feed/news-feed.component';
     MatIconModule,
     MatListModule,
     MaterialModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({
+      //  news: fromNews.newsReducer,
+      //   criminalReducer: fromCriminals.criminalReducer,
+    }),
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
